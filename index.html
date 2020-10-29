@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>repl.it</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Archivo Black"
+      rel="stylesheet"
+    />
+    <link href="CSS/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <script src="JS/script.js"></script>
+    <script src="JS/functions.js"></script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <div id="main-box">
+      <div class="row first-row">
+
+        <!-- This block consists the bot's image -->
+        <div class="col-md-2">
+          <img src="Images/bot.png" />
+        </div>
+        
+        <!-- This is the bot's name  -->
+        <div class="col-md-8 enter-your-choice">Chitti The Robot</div>
+
+        <!-- This allows the user to choose their own theme. Whenever user selects a theme,theme() function is called with the corresponding value -->
+  
+        <div class="col-md-2 themes">
+          <label for="themes">Choose a Theme:</label>
+          <select
+            class="btn btn-success"
+            onchange="theme()"
+            name="themes"
+            id="themes"
+          >
+            <option value="default">Default</option>
+            <option value="Theme1">Theme1</option>
+            <option value="Theme2">Theme2</option>
+            <option value="Dark">Dark</option>
+          </select>
+        </div>
+
+      </div>
+
+      <!-- This displays the functionalities of bot -->
+      <div id="menu">
+        <ul>
+          <li>Enter 1 to get a joke</li>
+          <li>Enter 2 play a game</li>
+          <li>Enter 3 to get the current time</li>
+          <li>Enter 4 quit</li>
+        </ul>
+      </div>
+
+      <!-- This input tag takes the input from the user -->
+      <div id="chat"></div>
+      <div class="ButtonList"></div>
+      <footer id="input-box">
+        <input id="input" type="text" placeholder="Enter your choice" />
+        &nbsp
+        <button class="send-button btn btn-success" onclick="talk()">
+          SEND
+        </button>
+      </footer>
+    </div>
+  </body>
+</html>
